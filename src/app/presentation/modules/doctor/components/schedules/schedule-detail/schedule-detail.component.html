@@ -1,0 +1,98 @@
+<div
+  class="flex  w-screen  md:w-96 bg-background h-full overflow-auto gap-2  px-3 flex-col scrollbar-thumb-rounded scrollbar-track-rounded grow  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted">
+  <div class="sticky top-0 flex flex-col bg-background  ">
+    <div class=" flex  relative flex-row items-center gap-2 py-3 justify-start">
+      <span class="text-lg text-foreground">{{'Horario: ' + schedule.id}}</span>
+
+      <button (click)="close()"
+        class="absolute cursor-pointer right-0 inline-flex w-fit justify-center rounded-md bg-background px-3 py-2 text-sm font-semibold text-foreground shadow-sm ring-1 ring-inset ring-foreground hover:bg-card sm:mt-0 sm:w-fit">
+        X
+      </button>
+    </div>
+    <hr class="border-dashed border-border">
+  </div>
+  <div class="flex py-2 flex-col">
+    <!-- <span class="text-xl text-foreground text-bold">Detalles</span> -->
+    <div class="px-2 flex-col flex">
+      <span class="text-xs text-muted-foreground">Tiempo de duracion</span>
+      <span class="text-base text-foreground">{{ schedule.slotDuration }}</span>
+
+    </div>
+
+
+  </div>
+  <hr class="border-dashed border-border">
+  <div class="flex py-2 flex-col">
+    <!-- <span class="text-xl text-foreground text-bold">Detalles</span> -->
+    <div class="px-2 flex-col flex">
+      <span class="text-xs text-muted-foreground">Cantidad de cupos</span>
+      <span class="text-base text-foreground">{{ schedule.totalSlots }}</span>
+
+    </div>
+
+
+  </div>
+  <hr class="border-dashed border-border">
+
+  <div class="flex py-2 flex-col">
+    <!-- <span class="text-xl text-foreground text-bold">Detalles</span> -->
+    <div class="px-2 flex-col flex">
+      <span class="text-xs text-muted-foreground">Hora inicial</span>
+      <span class="text-base text-foreground">{{ schedule.startTime }}</span>
+
+    </div>
+
+
+  </div>
+  <hr class="border-dashed border-border">
+  <div class="flex py-2 flex-col">
+    <!-- <span class="text-xl text-foreground text-bold">Detalles</span> -->
+    <div class="px-2 flex-col flex">
+      <span class="text-xs text-muted-foreground">Hora final</span>
+      <span class="text-base text-foreground">{{ schedule.endTime}}</span>
+
+    </div>
+
+
+  </div>
+  <hr class="border-dashed border-border">
+  <div class="flex py-2 flex-col">
+    <!-- <span class="text-xl text-foreground text-bold">Detalles</span> -->
+    <div class="px-2 flex-col flex">
+      <span class="text-xs text-muted-foreground">Doctor</span>
+      <span class="text-base text-foreground">{{ schedule.doctor?.user?.fullName }}</span>
+
+    </div>
+
+
+  </div>
+  <hr class="border-dashed border-border">
+
+
+  <div class="flex py-2 flex-col">
+    <div class="px-2 flex-col flex">
+      <span class="text-xs text-muted-foreground">Especialidad</span>
+      <span class="text-base text-foreground">{{schedule.speciality?.name}}</span>
+
+    </div>
+  </div>
+  <hr class="border-dashed border-border">
+  <div class="flex py-2 flex-col">
+    <div class="px-2 flex-col flex">
+      <span class="text-xs text-muted-foreground">Consultorio</span>
+      <span class="text-base text-foreground">{{schedule.consultingRoom?.roomName}}</span>
+
+    </div>
+  </div>
+  <hr class="border-dashed border-border">
+
+
+
+
+
+
+
+
+
+
+</div>

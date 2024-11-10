@@ -18,21 +18,33 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@ngxs/store": "^18.1.4",
+    "angular-svg-icon": "^18.0.2",
+    "apollo-angular": "^7.2.1",
     "rxjs": "~7.8.0",
+    "tailwind-scrollbar": "^3.1.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.14.3",
+    "@apollo/client": "^3.0.0",
+    "graphql": "^16"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.4",
     "@angular/cli": "^18.0.4",
     "@angular/compiler-cli": "^18.0.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/jasmine": "~5.1.0",
+    "autoprefixer": "^10.4.20",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "typescript": "~5.4.2"
   }
 }
