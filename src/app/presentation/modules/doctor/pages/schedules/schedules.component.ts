@@ -371,6 +371,8 @@ export class SchedulesComponent implements OnInit {
       return;
     }
 
+    this.schedules = [...this.schedules, result.value];
+
     this.dialogService.ShowSuccess({
       description: 'Horario agregado correctamente',
     });
