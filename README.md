@@ -1,27 +1,32 @@
-# DAdmin
+# ClinicApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+ClinicApp es una aplicación web construida con Angular que utiliza Client-Side Rendering (CSR) y consume una API en formato GraphQL. La aplicación está desplegada en AWS usando Amazon S3, CloudFront y GitHub Actions para la integración y despliegue continuo.
 
-## Development server
+## Tecnologías Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular**: Framework de JavaScript para construir aplicaciones de una sola página (SPA).
+- **Client-Side Rendering (CSR)**: La aplicación se renderiza en el lado del cliente, ofreciendo una experiencia de usuario dinámica.
+- **GraphQL**: Para el consumo de datos, la aplicación usa una API en formato GraphQL.
+- **AWS S3**: Almacena y distribuye los archivos estáticos de la aplicación.
+- **AWS CloudFront**: Actúa como red de distribución de contenido (CDN) para mejorar la velocidad de carga y la disponibilidad global.
+- **GitHub Actions**: Configurado para la automatización de despliegues continuos.
 
-## Code scaffolding
+## Despliegue en AWS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La aplicación está configurada para ser desplegada automáticamente en AWS mediante GitHub Actions. Aquí se detalla el flujo de despliegue:
 
-## Build
+### 1. Almacenamiento en Amazon S3
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Los archivos estáticos de Angular (generados al compilar el proyecto) se almacenan en un bucket de S3 configurado para hosting de sitios web estáticos.
 
-## Running unit tests
+### 2. Distribución mediante CloudFront
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Se utiliza CloudFront para servir los archivos estáticos desde ubicaciones de caché cercanas al usuario, mejorando así el rendimiento y reduciendo el tiempo de carga de la aplicación. CloudFront está configurado para apuntar al bucket de S3 como origen.
 
-## Running end-to-end tests
+### 3. GitHub Actions para Despliegue Continuo
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+El flujo de trabajo en GitHub Actions se ejecuta en cada push al repositorio, compilando la aplicación y sincronizando los archivos con el bucket de S3. Esto asegura que cada cambio en el código se despliegue automáticamente.
 
-## Further help
+#### Ejemplo de Workflow en GitHub Actions
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este es un ejemplo de configuración de `workflow.yml` para GitHub Actions, que se ejecuta en cada push a la rama `main`:
