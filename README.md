@@ -27,6 +27,4 @@ Se utiliza CloudFront para servir los archivos estáticos desde ubicaciones de c
 
 El flujo de trabajo en GitHub Actions se ejecuta en cada push al repositorio, compilando la aplicación y sincronizando los archivos con el bucket de S3. Esto asegura que cada cambio en el código se despliegue automáticamente.
 
-#### Ejemplo de Workflow en GitHub Actions
-
-Este es un ejemplo de configuración de `workflow.yml` para GitHub Actions, que se ejecuta en cada push a la rama `main`:
+:
