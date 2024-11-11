@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Appointment } from '../../../../../../models/appointment.model';
 
 @Component({
-  selector: 'app-appointment-item',
+  selector: '[appointment-item]',
   standalone: true,
   imports: [
     CommonModule,
@@ -10,4 +11,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './appointment-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppointmentItemComponent { }
+export class AppointmentItemComponent {
+
+  @Input() appointment!: Appointment;
+
+}

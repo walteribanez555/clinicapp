@@ -8,8 +8,8 @@
   ' flex-col px-4  sm:px-8 overflow-auto scrollbar-thumb-rounded scrollbar-track-rounded grow  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted py-0 md:py-4':
   ' flex-col px-4  sm:px-8 overflow-auto scrollbar-thumb-rounded scrollbar-track-rounded grow  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted py-4'
   ">
-    <app-appointment-hedaer  (onAddEvent)="onAddAppointment()"></app-appointment-hedaer>
-    <app-appointment-list-items></app-appointment-list-items>
+    <app-appointment-hedaer  (onAddEvent)="onAddAppointment()"   (generareReport)="onGenerateReport()"></app-appointment-hedaer>
+    <app-appointment-list-items  [appointments]="appointments" ></app-appointment-list-items>
   </div>
 
 

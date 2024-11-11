@@ -1,8 +1,14 @@
+import { Doctor } from "./doctor.model";
+import { DoctorSchedule } from "./doctorSchedule.model";
+import { Patient } from "./patient.model";
+
 export interface Appointment {
   id : number;
-  appointment_date : string;
+  appointmentDate : string;
   slot_number : number;
   status : number;
-  patient_id: number;
-  doctor_schedule : number;
+  patient : Patient;
+  doctor : Doctor;
+  doctorShedule : DoctorSchedule;
+
 }

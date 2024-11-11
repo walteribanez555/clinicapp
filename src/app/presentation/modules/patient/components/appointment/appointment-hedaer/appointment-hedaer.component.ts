@@ -14,10 +14,15 @@ export class AppointmentHedaerComponent {
 
 
   @Output() onAddEvent = new EventEmitter();
-
+  @Output() generareReport = new EventEmitter();
 
   onAddToggle() {
     this.onAddEvent.emit();
+  }
+
+
+  onGenerateReport() {
+    this.generareReport.emit();
   }
 
  }

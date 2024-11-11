@@ -14,20 +14,21 @@
       <!--Table head-->
       <thead class="text-xs uppercase text-muted-foreground">
         <tr>
-          <th class="py-3 text-left">Citas</th>
-
+          <th class="py-3 text-left">Fecha</th>
+          <th class="py-3 text-left">Hora</th>
+          <th class="py-3 text-left">Paciente</th>
           <th class="py-3 text-right" >Status</th>
         </tr>
       </thead>
       <!--end Table head-->
       <!--Table body-->
       <tbody>
-        <!-- <tr
-          *ngFor="let warehouse of warehouses"
-          [warehouse]="warehouse"
-          content-table-item
-          (click)="onSelectTable(warehouse)"
-          class="border-b border-dashed border-border hover:bg-card"></tr> -->
+        <tr
+          *ngFor="let appointment of appointments"
+          appointment-item
+          [appointment]="appointment"
+          (click)="onSelectTable(appointment)"
+          class="border-b border-dashed border-border hover:bg-card"></tr>
       </tbody>
       <!--end::Table body-->
     </table>

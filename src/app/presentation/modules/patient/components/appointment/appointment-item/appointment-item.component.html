@@ -1,1 +1,37 @@
-<p>appointment-item works!</p>,
+
+
+<td class="py-3 pl-3 text-start">
+  <div class="pr-1"  >
+   <span  class="text-sm text-muted-foreground" >{{appointment.appointmentDate}}</span>
+
+  </div>
+
+</td>
+
+
+<td class="py-3 pl-3 text-start">
+  <div class="pr-1"  >
+   <span  class="text-sm text-muted-foreground" >{{appointment.doctorShedule.start_time ?? appointment.doctorShedule.startTime}}</span>
+
+  </div>
+
+</td>
+
+<td class="py-3 pl-3 text-start">
+  <div class="pr-1"  >
+   <span  class="text-sm text-muted-foreground" >{{appointment.patient.user.fullName}}</span>
+
+  </div>
+
+</td>
+
+
+
+
+<td class="py-3 pl-3 text-right">
+  <div class="pr-1"  >
+   <span  class="text-sm text-muted-foreground" >{{ appointment.status}}</span>
+
+  </div>
+
+</td>
